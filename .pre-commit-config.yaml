@@ -1,0 +1,21 @@
+# Install once:  pip install pre-commit && pre-commit install
+#
+# The important hook is nbstripout: notebooks used to be committed with their
+# outputs, and the embedded base64 PNGs made sentiment_analysis.ipynb 899 KB of
+# unreviewable binary diff on every re-run. CI enforces the same rule.
+repos:
+  - repo: https://github.com/kynan/nbstripout
+    rev: 0.9.1
+    hooks:
+      - id: nbstripout
+
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v6.0.0
+    hooks:
+      - id: end-of-file-fixer
+      - id: trailing-whitespace
+      - id: check-yaml
+      - id: check-toml
+      - id: check-merge-conflict
+      - id: check-added-large-files
+        args: ["--maxkb=5120"]
