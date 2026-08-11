@@ -1,0 +1,7 @@
+# Test and hygiene tooling.
+-r requirements.txt
+-r requirements-app.txt
+-r requirements-data.txt
+
+pytest==9.1.1
+nbstripout==0.9.1

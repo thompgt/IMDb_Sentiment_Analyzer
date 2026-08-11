@@ -1,0 +1,15 @@
+# notebooks/sentiment_analysis_transformers.ipynb
+#
+# Heavy and deliberately separate: nothing else in this repo needs PyTorch.
+# Install from your shell BEFORE opening the notebook -- the notebook no longer
+# %pip-installs into a vendored directory at runtime.
+#
+#   pip install -r requirements-transformers.txt
+#
+# For a CUDA build of torch, install it first from https://pytorch.org.
+-r requirements.txt
+-r requirements-notebook.txt
+
+torch==2.9.1
+transformers==4.57.6
+datasets==4.4.1

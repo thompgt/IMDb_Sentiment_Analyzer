@@ -1,6 +1,10 @@
+# Python bytecode / caches
 .ipynb_checkpoints/
 __pycache__/
 *.py[cod]
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
 
 # Local Python dependency targets
 .pydeps*/
@@ -11,6 +15,17 @@ notebooks/.pydeps_transformers/
 .env
 venv/
 .venv/
+env/
 
 # Local/generated project data
 data/
+imdb_reviews.csv
+
+# Raw IMDb corpus (reproduce with `python download_data.py`, never commit)
+aclImdb/
+aclImdb_v1.tar.gz
+*.tar.gz
+
+# Trained model artifacts (reproduce with `python -m sentiment.train`)
+models/
+*.joblib

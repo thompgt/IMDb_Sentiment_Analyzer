@@ -1,0 +1,9 @@
+# notebooks/sentiment_analysis.ipynb
+-r requirements.txt
+-r requirements-data.txt
+
+matplotlib==3.11.1
+seaborn==0.13.2
+wordcloud==1.9.6
+nltk==3.10.2
+jupyterlab==4.6.3
