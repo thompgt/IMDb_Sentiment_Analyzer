@@ -1,0 +1,5 @@
+# Dataset download pipeline: `python download_data.py`
+-r requirements.txt
+
+requests==2.34.2
+tqdm==4.70.0
